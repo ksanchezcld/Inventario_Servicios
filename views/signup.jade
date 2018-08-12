@@ -1,0 +1,35 @@
+extend layout
+
+block content
+ h2.page-header Registro Usuarios
+ p Registrar usuario en el siguiente formulario. 
+ ul.errors
+  if errors
+   each error, i in errors
+    div.alert.alert-danger #{error.msg}
+ form(method="post", action='/domains/signup')
+  .form-group
+    label Nombre
+    input.form-control(name='name', type='text',
+    placeholder="Introduzca el nombre completo")
+  .form-group
+    label Email
+    input.form-control(name='email', type='text',
+    placeholder="Introduzca el correo electronico")
+  .form-group
+    label Username
+    input.form-control(name='username', type='text',
+    placeholder="Introduzca el nombre de usuario")
+  .form-group
+    label Password
+    input.form-control(name='password', type='text',
+    placeholder="Introduzca contraseña")
+  .form-group
+    label Confirm Password
+    input.form-control(name='password2', type='text',
+    placeholder="Confirme contraseña")
+    .form-group
+    label Profile Image
+    input.form-control(name='profileimage', type='file')
+
+  input.btn.btn-primary(type="submit", name="submit", value="Save")

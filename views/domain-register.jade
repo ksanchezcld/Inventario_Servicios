@@ -1,0 +1,36 @@
+extend layout
+
+block content
+ h2.page-header Inventario Dominios
+ p Registrar el inventario de dominios en el siguiente formulario. 
+ ul.errors
+  if errors
+   each error, i in errors
+    div.alert.alert-danger #{error.msg}
+ form(method="post", action='/domains/domain-register')
+  .form-group
+    label Nombre Dominio
+    input.form-control(name='domain_name', type='text',
+    placeholder="Introduzca el nombre de dominio")
+  .form-group
+    label Fecha de Compra
+    input.form-control(name='adquisition_date', type='text',
+    placeholder="Introduzca la fecha de compra del dominio")
+  .form-group
+    label Fecha de vencimiento
+    input.form-control(name='expiration_date', type='text',
+    placeholder="Introduzca fecha vencimiento del dominio")
+  .form-group
+    label Vigencia del dominio
+    input.form-control(name='adquisition_period', type='text',
+    placeholder="Vigencia del dominio")
+  .form-group
+    label Email
+    input.form-control(name='registered_email', type='email',
+    placeholder="Introduzca el correo de registro del dominio")
+    .form-group
+    label Numero Factura
+    input.form-control(name='invoice_number', type='text',
+    placeholder="Introduzca el numero de factura")
+
+  input.btn.btn-primary(type="submit", name="submit", value="Save")
