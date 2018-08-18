@@ -6,6 +6,8 @@ html
     link(href='/stylesheets/bootstrap.css', rel='stylesheet')
     link(href='/stylesheets/style.css', rel='stylesheet')
   body
+    .container
+     img.logo(src='/images/inventory_logo1.png')
     .nav.navbar.navbar-expand-md.navbar-dark.bg-dark
       .container
         .navbar-header
@@ -28,10 +30,10 @@ html
                a(href='/domains/logout') Logout
             
              li(class=(title == 'Registro Dominio' ? 'active' : ''))
-               a(href='/domains/domain-register') Domain Register - 
+               a(href='/domains/domain-register') Domain Register 
 
              li(class=(title == 'Registro Usuario' ? 'active' : ''))
-               a(href='/domains/signup') User Signup - 
+               a(href='/domains/signup') User Signup 
             
         // /.nav-collapse
     .container

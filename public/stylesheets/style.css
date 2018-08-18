@@ -1,3 +1,18 @@
+body{
+    background: #f4f4f4;
+    color: #666666;
+}
+
+.logo{
+    margin: auto;
+    display: block;
+}
+
+.container{
+    width: 750px;
+    
+}
+
 ul.success li{
     padding: 15px;
     margin-bottom: 20px;
@@ -15,4 +30,12 @@ ul.error li{
     color: #a94442;
     background-color: #f2dede;
     border-color: #ebccd1;
+}
+
+.navbar.collapse.navbar-collapse a:hover { 
+    padding: 10px;
+    margin: 0 10px;
+    background: #83cd29;
+    color:  #fff;
+    text-decoration: none;
 }
