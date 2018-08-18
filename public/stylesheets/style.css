@@ -4,8 +4,8 @@ body{
 }
 
 .logo{
-    margin: auto;
-    display: block;
+    height: 200px;
+    width: auto;
 }
 
 .container{
