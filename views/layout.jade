@@ -19,21 +19,20 @@ html
           a.navbar-brand(href='/') Inventory
         .navbar.collapse.navbar-collapse 
           ul.nav.navbar-nav
-          ul.nav.navbar-nav.navbar-right
             if !user
              li(class=(title == 'Login' ? 'active' : ''))
                a(href='/domains/login') Login
 
-            if user   /* Si el usuario esta logeado */
+          ul.nav.navbar-nav.navbar-right
+              li
+               a(href='/domains/logout') Logout
+            
              li(class=(title == 'Registro Dominio' ? 'active' : ''))
                a(href='/domains/domain-register') Domain Register - 
 
              li(class=(title == 'Registro Usuario' ? 'active' : ''))
                a(href='/domains/signup') User Signup - 
             
-              ul.nav.navbar-nav.navbar-right
-               li
-                a(href='/domains/logout') Logout
         // /.nav-collapse
     .container
      != messages()

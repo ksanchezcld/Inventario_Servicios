@@ -7,7 +7,11 @@ var db = mongoose.connection;
 var DomainSchema = mongoose.Schema({
     domain_name: {
         type: String,
-        //index: true
+        //index: true,
+        //Los documentos requieren este campo.
+        required: true,
+        //Este campo no se repite, debe ser unico.
+        unique: true,
     },
     adquisition_date: {
         type: String,
