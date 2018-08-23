@@ -21,9 +21,13 @@ block content
     input.form-control(name='expiration_date', type='text',
     placeholder="Introduzca fecha vencimiento del dominio")
   .form-group
-    label Vigencia del dominio
-    input.form-control(name='adquisition_period', type='text',
-    placeholder="Vigencia del dominio")
+    label(for='sel1') Vigencia anual del dominio
+    select#sel1.form-control
+      option 1
+      option 2
+      option 3
+      option 4
+      option 5
   .form-group
     label Email
     input.form-control(name='registered_email', type='email',
